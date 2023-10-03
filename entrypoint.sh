@@ -15,6 +15,8 @@ echo "gratn privileges to user"
 python3 ./artLebedev_testQuest/djangoProject/manage.py migrate
 sleep 5
 python3 ./artLebedev_testQuest/parser/main.py
+python3 ./artLebedev_testQuest/djangoProject/manage.py runserver
+echo "start server on 8000"
 
 
 
