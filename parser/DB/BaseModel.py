@@ -1,6 +1,6 @@
 from peewee import Model, MySQLDatabase
 
-connection = MySQLDatabase("lebedevart", user="root", password="password",
+connection = MySQLDatabase("lebedevart", user="root", password="",
                            port=3306, host="localhost")
 
 
