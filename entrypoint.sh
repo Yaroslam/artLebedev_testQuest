@@ -1,5 +1,6 @@
 #!/bin/bash
 usermod -d /var/lib/mysql/ mysql
+service mysql start
 sleep 5
 echo "start mysql"
 mysql -u root -e "create database lebedevart CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
