@@ -69,6 +69,7 @@ async def main():
                 email = getEmail(row)
                 phone = getPhoneNumber(row)
                 fio = row[0].strip()
+                print(fio)
                 living_place = row[1].strip() if row[1] != '' else "Отсутствует"
                 specialization = row[2].strip()
                 category = row[3].strip() if row[3] != '' else "Отсутствует"
