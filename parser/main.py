@@ -4,7 +4,7 @@ from aiocsv import AsyncReader
 import re
 from DTOs.PhoneDTO import PhoneDTO
 from DB.CertifiedSpecialistModel import CertifiedSpecialistModel
-
+from sys import platform
 
 def fillRow(row: list, needLen: int) -> list:
     if len(row) < needLen:
@@ -58,7 +58,11 @@ def getPhoneNumber(row: list) -> str | None:
     return phone
 
 async def main():
-    async with aiofiles.open("./table.csv", mode="r", encoding="utf-8", newline="") as afp:
+    if platform == "linux" or platform == "linux2":
+        file = "./artLebedev_testQuest/parser/table.csv"
+    elif platform == "win32":
+        file = "./table.csv"
+    async with aiofiles.open(file, mode="r", encoding="utf-8", newline="") as afp:
         async for row in AsyncReader(afp):
             if row[0] != 'Фамилия, имя, отчество аттестованного специалиста':
                 row = fillRow(row, 6)
