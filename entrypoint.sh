@@ -14,11 +14,10 @@ sleep 5
 echo "gratn privileges to user"
 python3 ./artLebedev_testQuest/djangoProject/manage.py migrate
 sleep 5
-ufw allow 8000
 echo "allow ufw 8000"
 sleep 5
 python3 ./artLebedev_testQuest/parser/main.py
-python3 ./artLebedev_testQuest/djangoProject/manage.py runserver
+python3 ./artLebedev_testQuest/djangoProject/manage.py runserver 0.0.0.0:8000
 echo "start server on 8000"
 
 
