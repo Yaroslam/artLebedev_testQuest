@@ -1,9 +1,9 @@
 import json
-from abc import ABC
 import django.db.models
 
 
-class AbstractSerializer(ABC):
+
+class AbstractSerializer:
     data = []
 
     def __init__(self, querySet):
