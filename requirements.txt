@@ -3,3 +3,4 @@ aiofiles==23.2.1
 peewee==3.15.4
 Django==4.1.2
 pymysql== 1.1.0
+cryptography==41.0.4
