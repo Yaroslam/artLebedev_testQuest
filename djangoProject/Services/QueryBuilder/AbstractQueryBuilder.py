@@ -15,7 +15,7 @@ class AbstractQueryBuilder(ABC):
         pass
 
     def apply(self):
-        return self.query
+        return self.query.all()
 
     def getByPk(self, pk):
         self.query = self.query.get(pk=pk)
