@@ -20,6 +20,7 @@ class AbstractSerializer:
             self.data.append(model_dict)
 
     def get_data(self):
+        self.querySet = None
         return self.data
 
     class Meta:
