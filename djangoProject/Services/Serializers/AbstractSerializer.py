@@ -2,11 +2,10 @@ import json
 import django.db.models
 
 
-
 class AbstractSerializer:
-    data = []
 
     def __init__(self, querySet):
+        self.data = []
         self.querySet = querySet
         self.__serialize__()
 

@@ -5,7 +5,6 @@ from django.views import View
 from CertifiedSpecialistCultarPreservation.QueryBuilder.CertifiedSpecialistQueryBuilder import CertifiedSpecialistQueryBuilder
 from CertifiedSpecialistCultarPreservation.models.CertifiedSpecialist import CertifiedSpecialist
 from api.CertifiedSpecialistCultarPreservation.Serializers.CertifiedSpecialistSerializer import CertifiedSpecialistSerializer
-from django.core.paginator import Paginator
 
 class MainView(View):
 
