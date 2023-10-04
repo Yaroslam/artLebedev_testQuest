@@ -7,5 +7,9 @@ from api.CertifiedSpecialistCultarPreservation.Serializers.CertifiedSpecialistSe
 class SingleView(View):
     def get(self, request, id):
         q = CertifiedSpecialistQueryBuilder(CertifiedSpecialist)
-        s = CertifiedSpecialistSerializer([q.getByPk(id).apply()])
-        return HttpResponse(s.get_data())
+        q = q.getByPk(id).apply()
+        if q == []:
+            return HttpResponse(status=404)
+        else:
+            s = CertifiedSpecialistSerializer([q])
+            return HttpResponse(s.get_data())

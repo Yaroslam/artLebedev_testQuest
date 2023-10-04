@@ -1,5 +1,3 @@
-import json
-from math import ceil
 from django.http import JsonResponse
 from django.views import View
 from CertifiedSpecialistCultarPreservation.QueryBuilder.CertifiedSpecialistQueryBuilder import CertifiedSpecialistQueryBuilder

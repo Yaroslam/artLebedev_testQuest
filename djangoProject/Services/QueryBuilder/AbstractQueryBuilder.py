@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-
+from django.core.exceptions import ObjectDoesNotExist
 
 class AbstractQueryBuilder(ABC):
     def __init__(self, targetModel):
@@ -18,5 +18,8 @@ class AbstractQueryBuilder(ABC):
         return self.query
 
     def getByPk(self, pk):
-        self.query = self.query.get(pk=pk)
+        try:
+            self.query = self.query.get(pk=pk)
+        except ObjectDoesNotExist:
+            self.query = []
         return self
