@@ -1,6 +1,6 @@
 Установка
 
-1. docker pull
+1. docker pull yaroslam/artlebedev-testquest:latest
 2. docker run -p 8000:8000 yaroslam/artlebedev-testquest
 
 В образе будет создана база данных lebedevart в MySQL, создана таблица certified\_specialist\_cultar\_objects\_preservation, создан пользователь user с паролем password установлен репозиторий, установлены зависимости, собраны данные из таблицы [https://opendata.mkrf.ru/opendata/7705851331-certified\_specialist](https://opendata.mkrf.ru/opendata/7705851331-certified_specialist) и записаны в таблицу lebedevart. certified\_specialist\_cultar\_objects\_preservation
